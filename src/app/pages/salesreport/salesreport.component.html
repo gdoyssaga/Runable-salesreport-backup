@@ -1,0 +1,55 @@
+<!-- Event Info -->
+<div class="content" role="heading">
+    <div class="container flex items-center justify-between">
+        <div class="eventinfo ">
+            <div class="location info flex flex-row mb-2">
+                <mat-icon>room</mat-icon>
+                <p class="font-medium">{{events.location}}</p>
+            </div>
+
+            <span class="text-5xl font-extrabold">{{events.eventName}}</span>
+        </div>
+
+        <div class="total-ticket  ">
+            <div
+                class="block h-32 w-96 max-w-sm p-10 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div class="text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+                    Total {{totalSales}} tickets
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Event Info -->
+
+
+
+<!--Racetype Info -->
+
+<body class="content">
+    <div class="container ">
+        <span class="text-2xl font-bold">Race Type</span>
+
+        <div class="flex columns-3 my-4 justify-center" *ngFor="let detail of events.raceTypeDetailList">
+            <div class="flex-auto w-full bg-[#27295D] text-base text-white p-4">
+                <div>
+                    <span class="font-bold">{{detail.raceName}} {{detail.distance}} kilometers</span>
+                </div>
+                <div class="flex flex-row justify-between">
+                    <div class="font-base">Price {{detail.price}} Baht</div>
+                    <div class="font-semibold"> Total {{detail.price * detail.sales }} Baht</div>
+                </div>
+            </div>
+
+            <div class="flex w-full text-base border-2 border-yellow-400 justify-center items-center">
+                <div>
+                    <span class="font-medium">sold {{detail.sales}} tickets</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!--Racetype Info -->
