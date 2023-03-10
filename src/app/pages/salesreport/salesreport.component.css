@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-/* Responsive Styles */
+
 @media screen and (max-width: 767px) {
 
     .card-container>*:not(.circle-link),
@@ -43,7 +43,6 @@
     margin-bottom: 0.5rem;
     align-items: center;
 }
-/* <div class="block h-32 w-96 max-w-sm p-10 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 "> */
 
 .event-location-info{
     display: flex;
@@ -52,22 +51,11 @@
 
 .ticket-sales-box {
     display: flex;
-    /* height: 8rem; */
-    /* width: 24rem; */
-    /* max-width: 420px; */
-    /* padding: 2.5rem; */
-    padding-top: 50px; /* 56px */
-    padding-bottom: 50px; /* 56px */
-    /* background-color: #FCEBE2; */
-    /* border: 1px solid #c4c4c4; */
+    padding-top: 50px; 
+    padding-bottom: 50px;    
     border-radius: 0.5rem; 
-    /* filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06)); */
   }
   
-  /* .ticket-sales-box:hover {
-    background-color: #f4f4f4;
-  } */
-
  
   
   .race-title{
