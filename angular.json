@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
@@ -58,6 +59,9 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          // "options": {
+          //   "proxyConfig": "src/proxy.conf.json"
+          // },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {

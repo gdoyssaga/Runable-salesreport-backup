@@ -1,19 +1,22 @@
 <!-- Event Info -->
 <div class="content" role="heading">
-    <div class="container flex items-center justify-between">
-        <div class="eventinfo ">
-            <div class="location info flex flex-row mb-2">
-                <mat-icon>room</mat-icon>
-                <p class="font-medium">{{events.location}}</p>
+    <div class="container flex flex-col sm:flex-row items-center justify-between ">
+
+        <div class="event-location-info items-center columns-1 mb-4">
+
+            <div class="">
+                <p class="text-5xl font-bold justify-center mb-2">{{events.eventName}}</p>
+                <span class="location-info">
+                    <mat-icon>room</mat-icon>
+                    <p class="font-base ">{{events.location}}</p>
+                </span>
             </div>
 
-            <span class="text-5xl font-extrabold">{{events.eventName}}</span>
         </div>
 
-        <div class="total-ticket  ">
-            <div
-                class="block h-32 w-96 max-w-sm p-10 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <div class="text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+        <div class="total-ticket flex bg-[#FCEBE2]  rounded  ">
+            <div class="ticket-sales-box px-40 ">
+                <div class="text-xl text-center font-medium text-gray-800 ">
                     Total {{totalSales}} tickets
                 </div>
 
@@ -30,24 +33,26 @@
 
 <body class="content">
     <div class="container ">
-        <span class="text-2xl font-bold">Race Type</span>
+        <div class="race-title">Race Type</div>
 
-        <div class="flex columns-3 my-4 justify-center" *ngFor="let detail of events.raceTypeDetailList">
-            <div class="flex-auto w-full bg-[#27295D] text-base text-white p-4">
+        <div class="flex flex-col sm:flex-row my-4 justify-center " *ngFor="let detail of events.raceTypeDetailList">
+            <div class="flex-auto col w-full bg-[#27295D] text-base  p-4 rounded ">
                 <div>
-                    <span class="font-bold">{{detail.raceName}} {{detail.distance}} kilometers</span>
+                    <span class="font-base text-[#FA9533]">{{detail.raceName}} {{detail.distance}}
+                        kilometers</span>
                 </div>
                 <div class="flex flex-row justify-between">
-                    <div class="font-base">Price {{detail.price}} Baht</div>
-                    <div class="font-semibold"> Total {{detail.price * detail.sales }} Baht</div>
+                    <div class="font-light text-white"> {{detail.price}} Baht</div>
+                    <div class="font-medium text-white"> Total {{detail.price * detail.sales }} Baht</div>
                 </div>
             </div>
 
-            <div class="flex w-full text-base border-2 border-yellow-400 justify-center items-center">
+            <div class="flex w-full text-base border-2 border-[#FA9533] rounded  justify-center items-center">
                 <div>
-                    <span class="font-medium">sold {{detail.sales}} tickets</span>
+                    <span class="font-medium text-gray-700 ">sold {{detail.sales}} tickets</span>
                 </div>
             </div>
+
         </div>
     </div>
 

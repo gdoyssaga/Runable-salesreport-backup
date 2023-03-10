@@ -2,5 +2,10 @@
 <button class="btn btn-success">Try bootstrap button</button>
 <app-create-event></app-create-event> -->
 <app-navbar></app-navbar>
-<a [routerLink]="['salesreport','1']" routerLinkActive="active">Salesreport</a>
+<div class="content">
+    <a [routerLink]="['salesreport','1']" routerLinkActive="active">Salesreport</a>
+    <a [routerLink]="['eventview']" routerLinkActive="active">Event-view</a>
+
+</div>
+
 <router-outlet></router-outlet>

@@ -29,7 +29,6 @@ export class SalesreportComponent implements OnInit {
         }
         console.log(this.totalSales);
         
-    
       })
   
   }
